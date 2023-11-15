@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Niki Style Hub</title>
+</head>
+<body>
+    <header>
+        <h1>Niki Style Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#promocoes" onclick="mostrarConteudo('promocoes')">Promoções</a></li>
+                <li><a href="#produtos" onclick="mostrarConteudo('produtos')">Produtos</a></li>
+                <li><a href="#acessorios" onclick="mostrarConteudo('acessorios')">Acessórios</a></li>
+                <li><a href="#contato" onclick="mostrarConteudo('contato')">Contato</a></li>
+                <li><a href="#login" onclick="mostrarConteudo('login')">Login</a></li>
+                <li><a href="#cadastro" onclick="mostrarConteudo('cadastro')">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="promocoes" class="conteudo">
+        <h2>Promoções</h2>
+        <p>Aproveite nossas promoções exclusivas!</p>
+    </div>
+
+    <div id="produtos" class="conteudo">
+        <h2>Produtos</h2>
+        <div class="produtos">
+            <h3>Camisa Nike</h3>
+            <p>Experimente o estilo e desempenho da Camiseta Preta Nike, projetada para os ousados. Com o
+            icônico swoosh da Nike e tecido respirável, é uma declaração de compromisso com a excelência,
+            seja na academia ou nas ruas.</p>
+
+        </div>
+    </div>
+
+    <div id="acessorios" class="conteudo">
+        <h2>Acessórios</h2>
+    </div>
+
+    <div id="contato" class="conteudo">
+        <h2>Contato</h2>
+    </div>
+
+    <div id="login" class="conteudo">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Usuário:</label>
+            <input class="inputs" type="text" id="username" name="username" required>
+
+            <label for="password">Senha:</label>
+            <input class="inputs" type="password" id="password" name="password" required>
+
+            <button id="buttom2"  type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <div id="cadastro" class="conteudo">
+        <h2>Cadastro</h2>
+        <form>
+            <label for="newUsername">Usuário:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="confirmEmail">Confirmar Email:</label>
+            <input type="email" id="confirmEmail" name="confirmEmail" required>
+
+            <label for="newPassword">Senha:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+
+            <label for="confirmPassword">Confirmar Senha:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <button id="buttom"  type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <!-- <footer>
+        <p>&copy; 2023 Niki Style Hub</p>
+    </footer> -->
+
+    <script>
+        function mostrarConteudo(id) {
+            var conteudos = document.getElementsByClassName('conteudo');
+            for (var i = 0; i < conteudos.length; i++) {
+                conteudos[i].style.display = 'none';
+            }
+
+            var conteudoSelecionado = document.getElementById(id);
+            conteudoSelecionado.style.display = 'block';
+        }
+    </script>
+</body>
+<script src="./cadastro.js"></script>
+<script src="./login.js"></script>
+</html>
